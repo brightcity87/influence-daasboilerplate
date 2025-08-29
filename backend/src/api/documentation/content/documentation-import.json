@@ -1,0 +1,320 @@
+{
+  "data": [
+    {
+      "title": "Introduction",
+      "slug": "introduction",
+      "description": "Platform overview, key features, and technical architecture",
+      "category": "get_started",
+      "order": 1,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Platform Overview",
+          "content": "Welcome to our DaaS (Data as a Service) Platform documentation. This comprehensive solution is built with modern technologies to provide scalable data management services. Our platform is specifically designed to simplify the process of selling and managing your database through a robust, full-stack application architecture."
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Technical Stack",
+          "content": "<ul><li><strong>Next.js Frontend:</strong> A powerful React framework offering Server-Side Rendering (SSR), Static Site Generation (SSG), and Incremental Static Regeneration (ISR). We use the Pages router for its proven stability and extensive community support.</li><li><strong>Strapi Backend:</strong> A leading open-source CMS that handles API generation, content management, and role-based access control.</li><li><strong>PostgreSQL Database:</strong> A reliable relational database system with Strapi handling all SQL operations.</li><li><strong>Chakra UI:</strong> An intuitive component library providing clean, maintainable styling solutions.</li><li><strong>Docker:</strong> Containerization for consistent development and deployment environments.</li></ul>"
+        },
+        {
+          "__component": "documentation.feature-list",
+          "features": [
+            {
+              "title": "Modern Architecture",
+              "description": "Built with Next.js frontend and Strapi backend for optimal performance",
+              "icon": "Architecture"
+            },
+            {
+              "title": "Scalable Database",
+              "description": "PostgreSQL database with automated query handling through Strapi",
+              "icon": "Database"
+            },
+            {
+              "title": "Containerized Deployment",
+              "description": "Docker containerization for consistent environments and easy scaling",
+              "icon": "Docker"
+            },
+            {
+              "title": "User-Friendly Interface",
+              "description": "Clean, responsive UI built with Chakra UI components",
+              "icon": "Interface"
+            }
+          ]
+        },
+        {
+          "__component": "documentation.code-block",
+          "description": "Example of a Chakra UI component implementation",
+          "language": "jsx",
+          "code": "<Box display=\"flex\" width=\"100%\" borderRadius=\"md\" overflow=\"hidden\" boxShadow=\"md\">\n  <VStack spacing={4} p={6} align=\"stretch\">\n    <Heading size=\"lg\">Welcome to DaaS</Heading>\n    <Text>A modern solution for database management</Text>\n  </VStack>\n</Box>"
+        },
+        {
+          "__component": "documentation.key-takeaway",
+          "content": "The platform combines Next.js, Strapi, PostgreSQL, and Docker to deliver a robust and scalable data management solution, with a focus on developer experience and maintainable code."
+        },
+        {
+          "__component": "documentation.pro-tip",
+          "content": "Our use of the Pages router in Next.js is a deliberate choice for production stability. While the App Router offers new features, we prioritize proven reliability for business-critical applications."
+        }
+      ]
+    },
+    {
+      "title": "Getting Started",
+      "slug": "getting-started",
+      "description": "Installation and setup guide for the platform",
+      "category": "get_started",
+      "order": 2,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Development Environment Setup",
+          "content": "To begin development, you'll need Visual Studio Code (VSCode) with the Docker extension installed. This guide will walk you through the complete setup process."
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "1. Installing Docker",
+          "content": "<ul><li>Download Docker Desktop for your operating system (Mac, Windows, or Linux) from the official website</li><li>Follow the installation instructions for your platform</li><li>For Windows users:<ul><li>Use the Hyper-V version (installation guide available at docs.docker.com)</li><li>Enable Hyper-V if needed</li><li>Restart your computer after installation</li></ul></li><li>Run Docker Desktop and verify installation</li><li>Check Docker extension in VSCode shows 'ready to use' status</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "2. Repository Setup",
+          "content": "<ul><li>Accept the GitHub invitation sent to your email after purchase</li><li>Clone the repository to your local machine</li><li>For Windows users, use PowerShell (as administrator) instead of Command Prompt</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "3. Node.js Setup with NVM",
+          "content": "<ul><li>Install Node Version Manager (NVM) for managing Node.js versions</li><li>Open terminal in the cloned repository</li><li>Run the following commands:<ul><li>nvm install v18.19.1</li><li>nvm use v18.19.1</li><li>Verify with node -v</li><li>npm install -g yarn</li><li>Verify with yarn -v</li></ul></li></ul>"
+        },
+        {
+          "__component": "documentation.code-block",
+          "description": "Required environment variables setup",
+          "language": "bash",
+          "code": "# Root .env\nNODE_ENV=development\nPORT=3000\n\n# Backend .env\nDATABASE_URL=postgres://user:password@localhost:5432/daas\nJWT_SECRET=your-secret-key\n\n# Frontend .env\nNEXT_PUBLIC_API_URL=http://localhost:1337"
+        },
+        {
+          "__component": "documentation.key-takeaway",
+          "content": "Ensure all prerequisites (Docker, Node.js, and Git) are properly installed and configured before proceeding with the project setup."
+        },
+        {
+          "__component": "documentation.pro-tip",
+          "content": "For production server deployment, the Docker installation process is simpler and requires only a few terminal commands. Always use separate .env files for different environments and never commit them to version control."
+        }
+      ]
+    },
+    {
+      "title": "Platform Features",
+      "slug": "platform-features",
+      "description": "Core capabilities and features of the platform",
+      "category": "features",
+      "order": 3,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Database Management",
+          "content": "<ul><li><strong>CSV Import:</strong> Easy import of your database in CSV format</li><li><strong>Automated Structure:</strong> System automatically creates filter options based on your database content</li><li><strong>Search Functionality:</strong> Users get 3 free searches in the /free section</li><li><strong>Full Access:</strong> Paid users can access the complete /database section after login</li><li><strong>Real-time Updates:</strong> Uses SWR for real-time data updates without page reloads</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Content Management",
+          "content": "<ul><li><strong>Strapi CMS Integration:</strong> Easy-to-use content management system</li><li><strong>WYSIWYG Editor:</strong> User-friendly blog post creation and editing</li><li><strong>Automated API:</strong> Strapi automatically generates necessary API endpoints</li><li><strong>Structured Content:</strong> Pre-built structures for FAQs, Products, Testimonials, and Blogs</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "User Management",
+          "content": "<ul><li><strong>Role-based Access:</strong> Comprehensive access control system</li><li><strong>Automated Onboarding:</strong> Automatic email with login links for new users</li><li><strong>Secure Authentication:</strong> Built-in security measures for user access</li><li><strong>User Dashboard:</strong> Customizable user interface and settings</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Payment Integration",
+          "content": "<ul><li><strong>Stripe Integration:</strong> Secure payment processing</li><li><strong>Webhook Support:</strong> Automated handling of payment events</li><li><strong>Flexible Products:</strong> Easy setup of different pricing tiers</li><li><strong>Transaction Management:</strong> Automated handling of successful payments</li></ul>"
+        },
+        {
+          "__component": "documentation.key-takeaway",
+          "content": "The platform provides a comprehensive suite of features for database management, content creation, user management, and payment processing, all integrated seamlessly for optimal functionality."
+        },
+        {
+          "__component": "documentation.pro-tip",
+          "content": "Take advantage of the automated features like filter generation and real-time updates to create a better user experience. The system is designed to handle most complex operations automatically."
+        }
+      ]
+    },
+    {
+      "title": "Administration Guide",
+      "slug": "administration-guide",
+      "description": "System management and configuration guidelines",
+      "category": "administration",
+      "order": 4,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Initial Configuration",
+          "content": "Before running the project, several configuration steps need to be completed. Follow these steps carefully to ensure proper setup:"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Environment Setup",
+          "content": "<ol><li>Locate the three .env.example files using CMD+P (or Ctrl+P on Windows) and typing 'example'</li><li>Rename each file by removing the '.example' extension</li><li>Fill in the correct information in each .env file</li></ol><p>Note: There's an .env file in each folder (Root, Backend, and Frontend). Each folder will become a Docker container with its own environment variables.</p>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Node Modules Installation",
+          "content": "<ol><li>Navigate to the backend folder: <code>cd backend</code></li><li>Install backend dependencies: <code>yarn install</code></li><li>Navigate to custom plugin directory: <code>cd src/plugins</code></li><li>Install custom plugin dependencies: <code>yarn install</code></li><li>Build the custom plugin: <code>yarn build</code></li><li>Return to root directory: <code>cd ../../..</code></li><li>Navigate to frontend folder: <code>cd frontend</code></li><li>Install frontend dependencies: <code>yarn install</code></li></ol>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Stripe Integration",
+          "content": "To set up Stripe for payments:<ol><li>Create a Stripe account if you haven't already</li><li>Navigate to the Developers section in your Stripe dashboard</li><li>Go to Webhooks and click 'Add endpoint'</li><li>Set the webhook URL to: <code>https://api.{projectname}.com/api/webhook/webhook</code></li><li>Select the events to listen for (typically 'checkout.session.completed')</li><li>Save the webhook configuration</li></ol>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Email Configuration",
+          "content": "We use PostmarkApp for sending emails. It offers $75 in startup credit for new SaaS companies. To set it up:<ol><li>Register with PostmarkApp</li><li>Complete their verification process</li><li>Explain your use case (remember, only transactional emails are allowed)</li></ol>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Running the Project",
+          "content": "<ol><li>Ensure no other projects are running to avoid port conflicts</li><li>Restart your computer and start Docker Desktop</li><li>Navigate to the project root in the terminal</li><li>Run <code>docker compose up</code></li></ol><p>Once complete, you'll have access to:<ul><li><strong>localhost:1337</strong> - Backend/Strapi admin panel</li><li><strong>localhost:3005</strong> - NextJS frontend</li></ul>"
+        },
+        {
+          "__component": "documentation.key-takeaway",
+          "content": "Proper configuration of environment variables, dependencies, and third-party services is crucial for the platform's functionality. Take time to verify each step before proceeding."
+        },
+        {
+          "__component": "documentation.pro-tip",
+          "content": "In a development environment, you'll need to save and restart the backend for changes to take effect. In a production environment, the backend would need to be rebuilt."
+        }
+      ]
+    },
+    {
+      "title": "Customization",
+      "slug": "customization",
+      "description": "Platform customization and extension options",
+      "category": "customization",
+      "order": 5,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Frontend Customization",
+          "content": "<ul><li>Theme configuration</li><li>Component modifications</li><li>Layout customization</li><li>Custom pages</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Backend Customization",
+          "content": "<ul><li>API extensions</li><li>Custom controllers</li><li>Database schema updates</li><li>Middleware configuration</li></ul>"
+        }
+      ]
+    },
+    {
+      "title": "Deployment",
+      "slug": "deployment",
+      "description": "Production deployment and maintenance procedures",
+      "category": "deployment",
+      "order": 6,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Production Setup",
+          "content": "<ul><li><strong>Server Requirements:</strong> Minimum 2 CPU cores, 4GB RAM for basic setup</li><li><strong>Domain Configuration:</strong> Set up DNS records and SSL certificates</li><li><strong>Environment Variables:</strong> Configure production environment settings</li><li><strong>Database Setup:</strong> Set up production database with proper backup</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Deployment Process",
+          "content": "<ul><li><strong>Build Process:</strong> Optimize and build frontend and backend</li><li><strong>Container Deployment:</strong> Deploy using Docker Compose</li><li><strong>Health Checks:</strong> Implement monitoring and alerts</li><li><strong>Backup Strategy:</strong> Configure automated backups</li></ul>"
+        },
+        {
+          "__component": "documentation.key-takeaway",
+          "content": "Proper production setup and deployment processes are crucial for maintaining a stable and secure platform."
+        },
+        {
+          "__component": "documentation.pro-tip",
+          "content": "Always maintain separate development and production environments, and use CI/CD pipelines for automated testing and deployment."
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "slug": "troubleshooting",
+      "description": "Common issues and debugging procedures",
+      "category": "troubleshooting",
+      "order": 7,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Common Issues",
+          "content": "<ul><li><strong>Database Connection:</strong> Check connection strings and credentials</li><li><strong>Docker Issues:</strong> Container startup and networking problems</li><li><strong>API Errors:</strong> Common API response codes and solutions</li><li><strong>Authentication:</strong> Login and session-related issues</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Debugging Tools",
+          "content": "<ul><li><strong>Logging:</strong> Access and error log locations</li><li><strong>Monitoring:</strong> System health and performance metrics</li><li><strong>Development Tools:</strong> Browser and API debugging tools</li></ul>"
+        },
+        {
+          "__component": "documentation.key-takeaway",
+          "content": "Effective troubleshooting requires systematic approach and proper use of debugging tools."
+        }
+      ]
+    },
+    {
+      "title": "Security Best Practices",
+      "slug": "security",
+      "description": "Security best practices and configurations",
+      "category": "security",
+      "order": 8,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Security Measures",
+          "content": "<ul><li><strong>Authentication:</strong> JWT token implementation and session management</li><li><strong>Data Encryption:</strong> SSL/TLS configuration and data protection</li><li><strong>Access Control:</strong> Role-based permissions and API security</li></ul>"
+        },
+        {
+          "__component": "documentation.key-takeaway",
+          "content": "Security is paramount - always follow best practices for authentication, encryption, and access control."
+        }
+      ]
+    },
+    {
+      "title": "Performance Optimization",
+      "slug": "performance",
+      "description": "Performance optimization guidelines",
+      "category": "performance",
+      "order": 9,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Frontend Optimization",
+          "content": "<ul><li><strong>Code Splitting:</strong> Implement dynamic imports</li><li><strong>Image Optimization:</strong> Use Next.js image optimization</li><li><strong>Caching:</strong> Implement browser and API response caching</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Backend Optimization",
+          "content": "<ul><li><strong>Database Indexing:</strong> Optimize query performance</li><li><strong>API Caching:</strong> Implement Redis for frequently accessed data</li><li><strong>Load Balancing:</strong> Configure for high availability</li></ul>"
+        }
+      ]
+    },
+    {
+      "title": "API Reference",
+      "slug": "api-reference",
+      "description": "API documentation and examples",
+      "category": "api_reference",
+      "order": 10,
+      "content": [
+        {
+          "__component": "documentation.text-section",
+          "heading": "Authentication",
+          "content": "<ul><li><strong>JWT Authentication:</strong> Token-based authentication process</li><li><strong>API Keys:</strong> Managing and using API keys</li><li><strong>OAuth:</strong> Third-party authentication integration</li></ul>"
+        },
+        {
+          "__component": "documentation.text-section",
+          "heading": "Endpoints",
+          "content": "<ul><li><strong>User Management:</strong> User CRUD operations</li><li><strong>Database Access:</strong> Data query and manipulation</li><li><strong>Payment Integration:</strong> Subscription and payment handling</li></ul>"
+        },
+        {
+          "__component": "documentation.code-block",
+          "description": "Example API request",
+          "language": "javascript",
+          "code": "fetch('https://api.example.com/data', {\n  headers: {\n    'Authorization': 'Bearer YOUR_JWT_TOKEN',\n    'Content-Type': 'application/json'\n  }\n})\n.then(response => response.json())\n.then(data => console.log(data));"
+        }
+      ]
+    }
+  ]
+}

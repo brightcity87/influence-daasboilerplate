@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "databases",
+  "info": {
+    "singularName": "database",
+    "pluralName": "databases",
+    "displayName": "database",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "displayName": "header",
+      "type": "component",
+      "repeatable": true,
+      "component": "header.header"
+    }
+  }
+}

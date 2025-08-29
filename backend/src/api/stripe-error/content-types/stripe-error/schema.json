@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stripe_errors",
+  "info": {
+    "singularName": "stripe-error",
+    "pluralName": "stripe-errors",
+    "displayName": "Stripe Error"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "eventId": {
+      "type": "string",
+      "required": true
+    },
+    "eventType": {
+      "type": "string",
+      "required": true
+    },
+    "error": {
+      "type": "text",
+      "required": true
+    },
+    "timestamp": {
+      "type": "biginteger",
+      "required": true
+    },
+    "retryCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "lastError": {
+      "type": "text"
+    }
+  }
+}

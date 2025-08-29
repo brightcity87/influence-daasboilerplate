@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_documentation_code_blocks",
+  "info": {
+    "displayName": "Code Block",
+    "description": "A block of code with optional description"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "text",
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "default": "bash"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

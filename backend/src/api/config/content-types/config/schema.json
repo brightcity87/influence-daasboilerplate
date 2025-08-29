@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "configs",
+  "info": {
+    "singularName": "config",
+    "pluralName": "configs",
+    "displayName": "config",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "template": {
+      "type": "enumeration",
+      "enum": [
+        "main",
+        "app"
+      ],
+      "default": "main"
+    },
+    "seed_database": {
+      "type": "boolean",
+      "default": false
+    },
+    "siteLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "allowDemo": {
+      "type": "boolean",
+      "default": false
+    },
+    "onlyDemo": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

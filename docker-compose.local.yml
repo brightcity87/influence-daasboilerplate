@@ -1,0 +1,42 @@
+name: ${PROJECT_SLUG}
+services:
+  # traefik:
+  #   command:
+  #     - "--log.level=DEBUG"
+  #     - "--api.insecure=true"
+  #     - "--providers.docker=true"
+  #     - "--providers.docker.network=${PROJECT_SLUG}_b-n"
+  #     - "--providers.docker.exposedbydefault=false"
+  #     - "--entrypoints.web.address=:80"
+  #     - "--entrypoints.websecure.address=:443"
+  #     - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+  #     - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+  #     # Local SSL configuration
+  #     - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+  #     - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
+  #     - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
+  #     - "--certificatesresolvers.myresolver.acme.email=test@localhost"
+  #     - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+  #     - "--entrypoints.websecure.http.tls=true"
+  #     - "--entrypoints.websecure.http.tls.certresolver=myresolver"
+  #   ports:
+  #     - "8080:8080"
+  #   volumes:
+  #     - traefik-certificates:/letsencrypt
+  #   labels:
+  #     - "traefik.enable=true"
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: ${PROJECT_SLUG}_mailpit
+    restart: unless-stopped
+    ports:
+      - "8025:8025" # Web UI
+      - "1025:1025" # SMTP port
+    networks:
+      - b-n
+
+networks:
+  b-n:
+    name: ${PROJECT_SLUG}_b-n
+    driver: bridge

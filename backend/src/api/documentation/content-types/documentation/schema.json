@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documentations",
+  "info": {
+    "singularName": "documentation",
+    "pluralName": "documentations",
+    "displayName": "Documentation",
+    "description": "Platform documentation pages"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer",
+      "default": 1
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "documentation.text-section",
+        "documentation.code-block",
+        "documentation.key-takeaway",
+        "documentation.pro-tip",
+        "documentation.feature-list"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "getting_started",
+        "platform_basics",
+        "advanced_features",
+        "administration",
+        "troubleshooting",
+        "get_started",
+        "features",
+        "customization",
+        "deployment",
+        "security",
+        "performance",
+        "api_reference"
+      ],
+      "required": true
+    },
+    "related_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::documentation.documentation"
+    }
+  }
+}

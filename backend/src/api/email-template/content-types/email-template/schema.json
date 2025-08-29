@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "email_templates",
+  "info": {
+    "singularName": "email-template",
+    "pluralName": "email-templates",
+    "displayName": "Email Template",
+    "description": "Email templates for various system notifications"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "htmlBody": {
+      "type": "blocks",
+      "required": true
+    },
+    "textBody": {
+      "type": "text",
+      "required": false
+    },
+    "variables": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

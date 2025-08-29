@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stripe_events",
+  "info": {
+    "singularName": "stripe-event",
+    "pluralName": "stripe-events",
+    "displayName": "StripeEvent"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "eventId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "processed": {
+      "type": "boolean",
+      "default": false
+    },
+    "processingErrors": {
+      "type": "json"
+    },
+    "retryCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "lastProcessedAt": {
+      "type": "datetime"
+    },
+    "lockExpiresAt": {
+      "type": "datetime"
+    }
+  }
+}

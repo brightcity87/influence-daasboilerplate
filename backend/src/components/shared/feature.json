@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_features",
+  "info": {
+    "displayName": "Feature",
+    "description": "Feature display with icon"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "database",
+        "users",
+        "chart-line",
+        "search",
+        "download",
+        "bookmark",
+        "bell",
+        "filter",
+        "chart-bar",
+        "history",
+        "discord",
+        "envelope",
+        "book"
+      ],
+      "required": true
+    }
+  }
+}

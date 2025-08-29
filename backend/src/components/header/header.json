@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_header_headers",
+  "info": {
+    "displayName": "header",
+    "icon": "database",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headername": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

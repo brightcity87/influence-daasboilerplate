@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_documentation_key_takeaways",
+  "info": {
+    "displayName": "Key Takeaway",
+    "description": "Important summary points in the documentation"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

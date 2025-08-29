@@ -1,0 +1,594 @@
+[
+  {
+    "key": "plugin_content_manager_configuration_components::shared.settings",
+    "value": {
+      "settings": {
+        "bulkable": true,
+        "filterable": true,
+        "searchable": true,
+        "pageSize": 10,
+        "mainField": "period",
+        "defaultSortBy": "id",
+        "defaultSortOrder": "ASC"
+      },
+      "metadatas": {
+        "id": {
+          "edit": {},
+          "list": {
+            "label": "id",
+            "searchable": false,
+            "sortable": false
+          }
+        },
+        "searchLimit": {
+          "edit": {
+            "label": "searchLimit",
+            "description": "Allowed search limit by period",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "searchLimit",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "exportLimit": {
+          "edit": {
+            "label": "exportLimit",
+            "description": "Allowed Data Exports per Period",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "exportLimit",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "apiAccess": {
+          "edit": {
+            "label": "apiAccess",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "apiAccess",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "allowedDataColumns": {
+          "edit": {
+            "label": "allowedDataColumns",
+            "description": "Data list of allowed fields, default is all (*)",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "allowedDataColumns",
+            "searchable": false,
+            "sortable": false
+          }
+        },
+        "allowCopy": {
+          "edit": {
+            "label": "allowCopy",
+            "description": "Allow Select and Copy on DB View",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "allowCopy",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "allowExport": {
+          "edit": {
+            "label": "allowExport",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "allowExport",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "supportLevel": {
+          "edit": {
+            "label": "supportLevel",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "supportLevel",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "allowedExportTypes": {
+          "edit": {
+            "label": "allowedExportTypes",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "allowedExportTypes",
+            "searchable": false,
+            "sortable": false
+          }
+        },
+        "period": {
+          "edit": {
+            "label": "period",
+            "description": "Limits Time Period Reset",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "period",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "maxRecords": {
+          "edit": {
+            "label": "maxRecords",
+            "description": "Max number of records to show (sorted by id)",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "maxRecords",
+            "searchable": true,
+            "sortable": true
+          }
+        }
+      },
+      "layouts": {
+        "list": [
+          "id",
+          "searchLimit",
+          "exportLimit",
+          "apiAccess"
+        ],
+        "edit": [
+          [
+            {
+              "name": "period",
+              "size": 6
+            }
+          ],
+          [
+            {
+              "name": "searchLimit",
+              "size": 4
+            },
+            {
+              "name": "exportLimit",
+              "size": 4
+            },
+            {
+              "name": "maxRecords",
+              "size": 4
+            }
+          ],
+          [
+            {
+              "name": "supportLevel",
+              "size": 4
+            },
+            {
+              "name": "allowCopy",
+              "size": 4
+            },
+            {
+              "name": "allowExport",
+              "size": 4
+            }
+          ],
+          [
+            {
+              "name": "allowedDataColumns",
+              "size": 12
+            }
+          ],
+          [
+            {
+              "name": "apiAccess",
+              "size": 6
+            }
+          ],
+          [
+            {
+              "name": "allowedExportTypes",
+              "size": 12
+            }
+          ]
+        ]
+      },
+      "uid": "shared.settings",
+      "isComponent": true
+    }
+  },
+  {
+    "key": "plugin_content_manager_configuration_content_types::api::product.product",
+    "value": {
+      "settings": {
+        "bulkable": true,
+        "filterable": true,
+        "searchable": true,
+        "pageSize": 10,
+        "mainField": "title",
+        "defaultSortBy": "title",
+        "defaultSortOrder": "ASC"
+      },
+      "metadatas": {
+        "id": {
+          "edit": {},
+          "list": {
+            "label": "id",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "title": {
+          "edit": {
+            "label": "title",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "title",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "description": {
+          "edit": {
+            "label": "description",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "description",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "stripe": {
+          "edit": {
+            "label": "stripe",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "stripe",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "price": {
+          "edit": {
+            "label": "price",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "price",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "oldprice": {
+          "edit": {
+            "label": "oldprice",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "oldprice",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "redirect": {
+          "edit": {
+            "label": "redirect",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "redirect",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "features": {
+          "edit": {
+            "label": "features",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "features",
+            "searchable": false,
+            "sortable": false
+          }
+        },
+        "cta_text": {
+          "edit": {
+            "label": "cta_text",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "cta_text",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "featured": {
+          "edit": {
+            "label": "featured",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "featured",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "rank": {
+          "edit": {
+            "label": "rank",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "rank",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "priceId": {
+          "edit": {
+            "label": "priceId",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "priceId",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "oldPriceId": {
+          "edit": {
+            "label": "oldPriceId",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "oldPriceId",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "subscriptionSettings": {
+          "edit": {
+            "label": "Tier Settings",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true
+          },
+          "list": {
+            "label": "subscriptionSettings",
+            "searchable": false,
+            "sortable": false
+          }
+        },
+        "users": {
+          "edit": {
+            "label": "users",
+            "description": "",
+            "placeholder": "",
+            "visible": true,
+            "editable": true,
+            "mainField": "username"
+          },
+          "list": {
+            "label": "users",
+            "searchable": false,
+            "sortable": false
+          }
+        },
+        "createdAt": {
+          "edit": {
+            "label": "createdAt",
+            "description": "",
+            "placeholder": "",
+            "visible": false,
+            "editable": true
+          },
+          "list": {
+            "label": "createdAt",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "updatedAt": {
+          "edit": {
+            "label": "updatedAt",
+            "description": "",
+            "placeholder": "",
+            "visible": false,
+            "editable": true
+          },
+          "list": {
+            "label": "updatedAt",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "createdBy": {
+          "edit": {
+            "label": "createdBy",
+            "description": "",
+            "placeholder": "",
+            "visible": false,
+            "editable": true,
+            "mainField": "firstname"
+          },
+          "list": {
+            "label": "createdBy",
+            "searchable": true,
+            "sortable": true
+          }
+        },
+        "updatedBy": {
+          "edit": {
+            "label": "updatedBy",
+            "description": "",
+            "placeholder": "",
+            "visible": false,
+            "editable": true,
+            "mainField": "firstname"
+          },
+          "list": {
+            "label": "updatedBy",
+            "searchable": true,
+            "sortable": true
+          }
+        }
+      },
+      "layouts": {
+        "list": [
+          "id",
+          "title",
+          "description",
+          "stripe"
+        ],
+        "edit": [
+          [
+            {
+              "name": "title",
+              "size": 6
+            },
+            {
+              "name": "description",
+              "size": 6
+            }
+          ],
+          [
+            {
+              "name": "stripe",
+              "size": 6
+            },
+            {
+              "name": "price",
+              "size": 4
+            }
+          ],
+          [
+            {
+              "name": "oldprice",
+              "size": 4
+            },
+            {
+              "name": "redirect",
+              "size": 6
+            }
+          ],
+          [
+            {
+              "name": "features",
+              "size": 12
+            }
+          ],
+          [
+            {
+              "name": "cta_text",
+              "size": 6
+            },
+            {
+              "name": "featured",
+              "size": 4
+            }
+          ],
+          [
+            {
+              "name": "rank",
+              "size": 4
+            }
+          ],
+          [
+            {
+              "name": "users",
+              "size": 6
+            }
+          ],
+          [
+            {
+              "name": "subscriptionSettings",
+              "size": 12
+            }
+          ],
+          [
+            {
+              "name": "priceId",
+              "size": 6
+            },
+            {
+              "name": "oldPriceId",
+              "size": 6
+            }
+          ]
+        ]
+      },
+      "uid": "api::product.product"
+    }
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "filteroptions",
+  "info": {
+    "singularName": "filteroption",
+    "pluralName": "filteroptions",
+    "displayName": "filteroptions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "filteroptions": {
+      "type": "json"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

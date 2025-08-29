@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_documentation_text_sections",
+  "info": {
+    "displayName": "Text Section",
+    "description": "A section of documentation text with a heading"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

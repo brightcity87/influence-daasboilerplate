@@ -1,0 +1,51 @@
+import {
+  FaRocket,
+  FaPuzzlePiece,
+  FaBook,
+  FaPalette,
+  FaDatabase,
+  FaPenNib,
+  FaUsers,
+  FaChartLine,
+  FaSearch,
+  FaDownload,
+  FaBookmark,
+  FaBell,
+  FaFilter,
+  FaChartBar,
+  FaHistory,
+  FaDiscord,
+  FaEnvelope,
+  FaFileAlt,
+  FaCode,
+  FaCog,
+  FaServer,
+} from "react-icons/fa";
+import { IconType } from "react-icons";
+
+export const getIconComponent = (iconName: string): IconType => {
+  const iconMap: { [key: string]: IconType } = {
+    database: FaDatabase,
+    users: FaUsers,
+    "chart-line": FaChartLine,
+    search: FaSearch,
+    download: FaDownload,
+    bookmark: FaBookmark,
+    bell: FaBell,
+    filter: FaFilter,
+    "chart-bar": FaChartBar,
+    history: FaHistory,
+    discord: FaDiscord,
+    envelope: FaEnvelope,
+    book: FaBook,
+    rocket: FaRocket,
+    puzzle: FaPuzzlePiece,
+    palette: FaPalette,
+    pen: FaPenNib,
+    "file-csv": FaFileAlt,
+    api: FaCode,
+    cog: FaCog,
+    server: FaServer,
+  };
+  return iconMap[iconName] || FaBook;
+}; 

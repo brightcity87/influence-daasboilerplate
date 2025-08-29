@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "webhooks",
+  "info": {
+    "singularName": "webhook",
+    "pluralName": "webhooks",
+    "displayName": "webhook"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

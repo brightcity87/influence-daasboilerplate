@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "popular_searches",
+  "info": {
+    "singularName": "popular-search",
+    "pluralName": "popular-searches",
+    "displayName": "Popular Searches",
+    "description": "Manage popular searches shown on the free page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "searchTerm": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

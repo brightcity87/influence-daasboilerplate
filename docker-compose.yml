@@ -1,0 +1,113 @@
+version: '3.9'
+
+services:
+  traefik:
+    image: "traefik:v3.1.2"
+    container_name: "traefik"
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - b-n
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /docker/letsencrypt:/letsencrypt
+    command:
+      - --api.dashboard=false  # Disable Traefik dashboard in production
+      - --log.level=INFO  # Set log level to INFO for production
+      - --accesslog=true
+      - --providers.docker.network=${PROJECT_SLUG}_b-n
+      - --providers.docker.exposedByDefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --entryPoints.web.http.redirections.entrypoint.to=websecure
+      - --entryPoints.web.http.redirections.entrypoint.scheme=https
+      - --entrypoints.websecure.asDefault=true
+      - --entrypoints.websecure.http.tls.certresolver=myresolver
+      - --certificatesresolvers.myresolver.acme.email=info@${DOMAINNAME}
+      - --certificatesresolvers.myresolver.acme.caserver=https://acme-v02.api.letsencrypt.org/directory  # Use Let's Encrypt production environment
+      - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
+      - --certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web  # Enable HTTP-01 challenge
+
+  frontend:
+    container_name: ${PROJECT_SLUG}_frontend
+    build:
+      context: .
+      dockerfile: ./docker/frontend/${ENVIRONMENT}/Dockerfile
+      args:
+        - NODE_ENV=${ENVIRONMENT}
+    restart: always
+    networks:
+      - ex
+      - b-n
+    env_file:
+      - ./frontend/.env
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.frontend.rule=Host(`${DOMAINNAME}`) || Host(`www.${DOMAINNAME}`)
+      - traefik.http.routers.frontend.entrypoints=websecure
+      - traefik.http.routers.frontend.tls.certresolver=myresolver
+      - traefik.docker.network=${PROJECT_SLUG}_b-n
+    depends_on:
+      - backend
+    ports:
+      - "3005:3005"
+
+  postgres:
+    image: postgres:16
+    container_name: ${PROJECT_SLUG}_postgres
+    restart: unless-stopped
+    env_file: ./backend/.env
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/
+    command: ["postgres", "-p", "5555"]
+    networks:
+      - db-n
+
+
+  backend:
+    container_name: ${PROJECT_SLUG}_backend
+    build:
+      context: .
+      dockerfile: ./docker/backend/${ENVIRONMENT}/Dockerfile
+      args:
+        - NODE_ENV=${ENVIRONMENT}
+    restart: unless-stopped
+    env_file: ./backend/.env
+    volumes:
+      - ./backend/config:/app/config      
+      - ./backend/src:/app/src
+      - ./backend/package.json:/app/package.json
+      - ./backend/.env:/app/.env
+      - ./backend/public/uploads:/app/public/uploads
+      - /app/node_modules
+    networks:
+      - b-n
+      - db-n
+    depends_on:
+      - postgres
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.backend.rule=Host(`api.${DOMAINNAME}`)
+      - traefik.http.routers.backend.entrypoints=websecure
+      - traefik.http.routers.backend.tls.certresolver=myresolver
+      - traefik.http.services.backend.loadbalancer.server.port=1337
+      - traefik.docker.network=${PROJECT_SLUG}_b-n
+    ports:
+      - "1337:1337"
+
+volumes:
+  postgres-data:
+  letsencrypt:
+    name: letsencrypt
+
+networks:
+  b-n:
+    name: ${PROJECT_SLUG}_b-n
+    driver: bridge
+  ex:
+    name: ${PROJECT_SLUG}_ex
+    driver: bridge
+  db-n:
+    name: ${PROJECT_SLUG}_db-n
+    driver: bridge

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_documentation_pro_tips",
+  "info": {
+    "displayName": "Pro Tip",
+    "description": "Advanced tips and best practices"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

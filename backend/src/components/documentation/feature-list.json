@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_documentation_feature_lists",
+  "info": {
+    "displayName": "Feature List",
+    "description": "A list of features with icons and descriptions"
+  },
+  "options": {},
+  "attributes": {
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "documentation.feature"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "stripe": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "oldprice": {
+      "type": "integer"
+    },
+    "redirect": {
+      "type": "string"
+    },
+    "features": {
+      "type": "json"
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "rank": {
+      "type": "integer"
+    },
+    "priceId": {
+      "type": "string"
+    },
+    "oldPriceId": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "default": "payment"
+    },
+    "subscriptionSettings": {
+      "type": "component",
+      "component": "shared.settings"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "subscriptionTier"
+    },
+    "isDemo": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

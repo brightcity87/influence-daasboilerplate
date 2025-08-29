@@ -1,0 +1,126 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "hasAccess": {
+      "type": "boolean",
+      "default": false
+    },
+    "priceId": {
+      "type": "string"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "userid": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string"
+    },
+    "githubUsername": {
+      "type": "string"
+    },
+    "subscriptionTier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "users"
+    },
+    "subscriptionStatus": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive",
+        "canceled"
+      ],
+      "default": "inactive"
+    },
+    "subscriptionStartDate": {
+      "type": "datetime"
+    },
+    "subscriptionEndDate": {
+      "type": "datetime"
+    },
+    "allowance": {
+      "type": "json",
+      "default": {
+        "searchCount": 0,
+        "exportCount": 0,
+        "exportFormat": "csv",
+        "exportLimit": 0,
+        "dbColumns": [
+          "*"
+        ],
+        "apiAccess": false
+      }
+    },
+    "downloadMetadata": {
+      "type": "json",
+      "default": {}
+    }
+  }
+}

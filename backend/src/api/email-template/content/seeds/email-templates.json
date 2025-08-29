@@ -1,0 +1,174 @@
+{
+  "templates": [
+    {
+      "name": "welcome-email",
+      "subject": "Welcome to {{projectName}}",
+      "htmlBody": [
+        {
+          "type": "heading",
+          "level": 3,
+          "children": [
+            {
+              "text": "Welcome to {{projectName}}!",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Hello {{userName}},",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Thank you for your purchase! To access your resources, please visit: {{accessUrl}}",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "bold": true,
+              "text": "This is your personal access link - please do not share it with anyone.",
+              "type": "text",
+              "italic": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Next Steps:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "format": "unordered",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Join our Discord community: {{discordUrl}}",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Check out our documentation",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "text": "Reach out if you need help: {{supportEmail}}",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Best regards,",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "bold": true,
+              "text": "The {{projectName}} Team",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "textBody": "\nWelcome to {{projectName}}!\n\nHello {{userName}},\n\nThank you for your purchase! To access your resources, please visit:\n{{accessUrl}}\n\nThis is your personal access link - please do not share it with anyone.\n\nNext Steps:\n- Join our Discord community: {{discordUrl}}\n- Check out our documentation\n- Reach out if you need help: {{supportEmail}}\n\nBest regards,\nThe {{projectName}} Team\n",
+      "variables": {
+        "userName": "User's name",
+        "accessUrl": "NAccess URL with token",
+        "discordUrl": "Discord invitation URL",
+        "projectName": "Project name",
+        "supportEmail": "Support email address"
+      },
+      "description": "Welcome email sent after successful purchase"
+    },
+    {
+      "name": "login-email",
+      "subject": "{{projectName}} | Your Login Link",
+      "htmlBody": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "bold": true,
+              "text": "Hello {{userName}},",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Click on the following link to log in to your account:",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "{{accessUrl}}",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "bold": true,
+              "text": "This link will expire in 15min",
+              "type": "text"
+            },
+            {
+              "text": ". If you didn't request this, please ignore this email.",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "textBody": "Hello {{userName}},\n\nClick on the following link to log in to your account:\n{{accessUrl}}\n\nThis link will expire in 15min. If you didn't request this, please ignore this email.",
+      "variables": {
+        "userName": "User's name",
+        "accessUrl": "Access URL with token",
+        "projectName": "Project name"
+      },
+      "description": "Login email sent to users after successful login"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ttinfluencers.xyz
+Host: https://leadsinc.net
 
 # Sitemaps
-Sitemap: https://ttinfluencers.xyz/sitemap.xml
+Sitemap: https://leadsinc.net/sitemap.xml

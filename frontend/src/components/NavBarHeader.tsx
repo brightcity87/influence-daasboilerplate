@@ -140,17 +140,11 @@ export const NavBarHeader = ({ featuredProduct, config }: NavBarHeaderProps) => 
       >
         Testimonials
       </Text>
-      <Text as={Link} href="/docs" color={textPrimary} style={interRegular.style}>
-        Docs
-      </Text>
       <Text as="a" href={process.env.NEXT_PUBLIC_FRONTEND_URL + "#faq"} color={textPrimary} style={interRegular.style}>
         FAQ
       </Text>
       <Text as={Link} href="/blog" color={textPrimary} style={interRegular.style}>
         Blog
-      </Text>
-      <Text as={Link} href="/contact-us" color={textPrimary} style={interRegular.style}>
-        Contact us
       </Text>
     </>
   );
@@ -222,7 +216,7 @@ export const NavBarHeader = ({ featuredProduct, config }: NavBarHeaderProps) => 
         <Popover placement="bottom" trigger="hover">
           <PopoverTrigger>
             <Button colorScheme="gray" variant="solid" borderRadius="10px" size="lg" px={8}>
-              <Text style={interFat.style}>Get Instant Access</Text>
+              <Text style={interFat.style}>Try for free</Text>
             </Button>
           </PopoverTrigger>
           <PopoverContent>

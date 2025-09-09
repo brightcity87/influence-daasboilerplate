@@ -54,17 +54,13 @@ export const Footer = () => {
                 </Link>
               </Flex>
 
-              {/* Project tagline */}
-              <Text color="grey" lineHeight={1.5} style={interFat.style} textAlign={["center", "center", "left"]}>
-                Build a scalable and customer ready DaaS product
-              </Text>
               {/* Copyright notice */}
               <Text textAlign={"center"} color={"grey"}>
                 &copy; {new Date().getFullYear()} {PROJECTNAME}. All rights reserved.
               </Text>
               {/* Disclaimer */}
               <Text fontSize="xs" color="gray.500" textAlign={["center", "center", "left"]}>
-                We are not associated with any person or company appearing in the database(s).
+                Unless expressly stated, ConferenceLink is not endorsed by, affiliated with, authorized by, or in any way officially connected to any event organizer or any of its subsidiaries or affiliates. All product and company names are the registered trademarks of their original owners.
               </Text>
             </VStack>
 

@@ -125,10 +125,10 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
               lineHeight={1.2}
               style={interExtraFat.style}
             >
-              The Ultimate TikTok Influencer Database
+              Is Your Team Wasting Hours Prospecting Instead of Closing New Partners?
             </Text>
 
-            <Text textAlign="center">A database to find influencers in seconds.</Text>
+            <Text textAlign="center">We’ve already done the research—just plug into the data, reach out, and start closing.</Text>
 
             <Stack direction={{ base: "column", md: "row" }} spacing={4} width="100%" justifyContent="center">
               {loading && <Skeleton height="40px" width="200px" />}
@@ -212,20 +212,9 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                     width={{ base: "100%", md: "auto" }}
                     px={{ base: 8, md: 20 }}
                   >
-                    <Text style={interFat.style}>Database</Text>
+                    <Text style={interFat.style}>Search Now</Text>
                   </Button>
                   <Popover placement="bottom" trigger="hover">
-                    <PopoverTrigger>
-                      <Button
-                        colorScheme="gray"
-                        variant="solid"
-                        borderRadius="10px"
-                        size={{ base: "md", md: "lg" }}
-                        px={8}
-                      >
-                        <Text style={interFat.style}>Get Instant Access</Text>
-                      </Button>
-                    </PopoverTrigger>
                     <PopoverContent>
                       <PopoverBody>
                         This is a demo project. You already have access. Just click the Database button!
@@ -312,12 +301,12 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                 fontSize={{ base: "xl", md: "xx-large" }}
                 style={interRegular.style}
               >
-                TARGETED INFLUENCERS READY TO GENERATE REVENUE FOR YOUR BUSINESS
+                TARGETED LEADS READY TO INCREASE THE REVENUE FOR YOUR BUSINESS
               </Text>
 
               <Box width="100%" height="auto" position="relative">
                 <Image
-                  src="https://i.imgur.com/wz25XH2.png"
+                  src="/target.png"
                   alt="hero"
                   layout="responsive"
                   width={2000}
@@ -328,34 +317,34 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
 
             <chakra.section id="how-it-works" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
               <Text py={5} as={"p"} align={"center"} fontSize={{ base: "2xl", md: "xxx-large" }} style={interFat.style}>
-                How It Works
+                How To Increase Your Revenue
               </Text>
 
               <Stack direction={{ base: "column", md: "row" }} spacing={10} align={"start"}>
                 <VStack w={{ base: "100%", md: "33%" }} p={4} align={"start"}>
                   <Text fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                    1. Sign Up In Ten Seconds
+                    1. Sign Up
                   </Text>
                   <Text fontSize={{ base: "md", md: "large" }}>
-                    All you have to do is click the subscribe button and enter your email. That's it.
+                    All you have to do is click the “Get Started” button and enter your email.
                   </Text>
                 </VStack>
 
                 <VStack w={{ base: "100%", md: "33%" }} p={4} align={"start"}>
                   <Text fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                    2. Receive Leads Instantly
+                    2. Get Instant Access to Database
                   </Text>
                   <Text fontSize={{ base: "md", md: "large" }}>
-                    Receive instant access to the database of target influencers upon sign up + monthly updates.
+                    Get instant access to our carefully curated database of leads + monthly updates.
                   </Text>
                 </VStack>
 
                 <VStack w={{ base: "100%", md: "33%" }} p={4} align={"start"}>
                   <Text fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                    3. Start Reaching Out Today
+                    3. Close New Partners Today
                   </Text>
                   <Text fontSize={{ base: "md", md: "large" }}>
-                    Now that you have your influencers, you can start reaching out and closing deals.
+                    Now that you have access to the database, find, contact and close new business!
                   </Text>
                 </VStack>
               </Stack>
@@ -363,7 +352,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
 
             <chakra.section id="testimonials" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
               <Text py={5} as={"p"} align={"center"} fontSize={{ base: "2xl", md: "xxx-large" }} style={interFat.style}>
-                OUR CUSTOMERS HAVE MADE MILLIONS OF DOLLARS USING OUR LEADS
+                Our subscribers have closed thousands of deals using our leads
               </Text>
 
               <VStack spacing={8} align="center">
@@ -406,7 +395,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
 
             <Box width="100%" height="auto" position="relative">
               <Image
-                src="https://i.imgur.com/wz25XH2.png"
+                src="/companyLogo.png"
                 alt="company-logos"
                 layout="responsive"
                 width={2000}
@@ -416,10 +405,10 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
 
             <chakra.section id="strategies" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
               <Text as={"p"} align={"center"} fontSize={{ base: "2xl", md: "xxx-large" }} style={interFat.style}>
-                Streamline your outreach strategy
+                Simplify your prospecting
               </Text>
               <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interRegular.style}>
-                A simple and effective way to do outreach for your business
+                Find, contact, and close your ideal partners with our easy-to-use database.
               </Text>
 
               <VStack py={20} spacing={10}>
@@ -432,11 +421,10 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                       fontSize={{ base: "xl", md: "xx-large" }}
                       style={interFat.style}
                     >
-                      Find Influencers
+                      Find Leads
                     </Text>
                     <Text as={"p"} align={"start"} fontSize={{ base: "lg", md: "x-large" }} style={interRegular.style}>
-                      From micro, to large influencers, to fortune 500 media companies. These influencers have big
-                      audiences to grow your business.
+                      Startups, large brands, fortune 500 media companies. Each of these companies have big needs and even bigger budgets to match them.
                     </Text>
                   </VStack>
                   <Box width={{ base: "100%", md: "50%" }}>
@@ -463,8 +451,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                       That are handpicked for your business
                     </Text>
                     <Text as={"p"} align={"start"} fontSize={{ base: "lg", md: "x-large" }} style={interRegular.style}>
-                      No, you won't find Tesla or Elon's email as entries. You'll find contact information that makes it
-                      easy to connect and build relationships with potential influencers.
+                      No Tim Cook or Jeff Bezos contact details but you will find contact information for potential partners that make closing new business easy.
                     </Text>
                   </VStack>
                 </Stack>
@@ -504,48 +491,28 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
 
             <chakra.section id="features" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
               <Text as={"p"} align={"center"} fontSize={{ base: "2xl", md: "xxx-large" }} style={interFat.style}>
-                Save a ton of money and time
+                Save A LOT of time and money
               </Text>
               <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interRegular.style}>
-                We spend thousands of dollars and hundreds of hours collecting these contacts
+                We literally spend thousands of dollars and tens of hours gathering these lists
               </Text>
 
               <SimpleGrid py={6} columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
                 <Box>
                   <VStack align={"center"}>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      🖐🏼
-                    </Text>
                     <Text as={"p"} align={"center"} fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                      Handpicked one by one
+                      Carefully selected one by one
                     </Text>
                     <Text as={"p"} align={"center"} fontSize={{ base: "md", md: "large" }} style={interRegular.style}>
-                      Every single data point is collected and verified by a human. Not a robot.
+                      Each data point is collected and verified by a person. No bots or agents are involved.
                     </Text>
                   </VStack>
                 </Box>
 
                 <Box>
                   <VStack align={"center"}>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      🧬
-                    </Text>
                     <Text as={"p"} align={"center"} fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                      100s of hours on research
-                    </Text>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "md", md: "large" }} style={interRegular.style}>
-                      We spend hundreds of hours every month to collect the most relevant companies.
-                    </Text>
-                  </VStack>
-                </Box>
-
-                <Box>
-                  <VStack align={"center"}>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      💰
-                    </Text>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                      1000s of dollars on tech
+                      Up to date and accurate
                     </Text>
                     <Text as={"p"} align={"center"} fontSize={{ base: "md", md: "large" }} style={interRegular.style}>
                       We spend thousands of dollars every year to access the world's best databases and tools.
@@ -555,37 +522,6 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
 
                 <Box>
                   <VStack align={"center"}>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      📖
-                    </Text>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                      Publicly available & verified
-                    </Text>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "md", md: "large" }} style={interRegular.style}>
-                      We check that our data points are publicly available and verify them one by one.
-                    </Text>
-                  </VStack>
-                </Box>
-
-                <Box>
-                  <VStack align={"center"}>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      🇪🇺
-                    </Text>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                      GDPR Compliant
-                    </Text>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "md", md: "large" }} style={interRegular.style}>
-                      We are up to date with all the key privacy and data protection requirements of GDPR.
-                    </Text>
-                  </VStack>
-                </Box>
-
-                <Box>
-                  <VStack align={"center"}>
-                    <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      ⭐️
-                    </Text>
                     <Text as={"p"} align={"center"} fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
                       Up to date and accurate
                     </Text>
@@ -594,247 +530,13 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                     </Text>
                   </VStack>
                 </Box>
+
+                
               </SimpleGrid>
             </chakra.section>
 
-            <chakra.section id="reasons" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
-              <VStack spacing={20}>
-                <Stack
-                  direction={{ base: "column", md: "row" }}
-                  spacing={{ base: 10, md: 20 }}
-                  width={"100%"}
-                  align={"start"}
-                >
-                  <Box width={{ base: "100%", md: "50%" }}>
-                    <Image
-                      style={{ filter: "grayscale(100%)" }}
-                      src="/small_agency.jpeg"
-                      alt="small-agency"
-                      layout="responsive"
-                      width={500}
-                      height={400}
-                    />
-                  </Box>
-                  <VStack align={"start"} width={{ base: "100%", md: "50%" }}>
-                    <Text as={"p"} align={"start"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      Join a small number of companies
-                    </Text>
-                    <UnorderedList>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          We have high prices by design and raise them constantly.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          That way we throttle access and filter out low quality customers.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          The number of our customer is in the low 10s.
-                        </Text>
-                      </ListItem>
-                    </UnorderedList>
-                  </VStack>
-                </Stack>
-
-                <Stack
-                  direction={{ base: "column", md: "row" }}
-                  spacing={{ base: 10, md: 20 }}
-                  width={"100%"}
-                  align={"start"}
-                >
-                  <Box width={{ base: "100%", md: "50%" }}>
-                    <Image
-                      style={{ filter: "grayscale(100%)" }}
-                      src="/section_img2.jpg"
-                      alt="customers"
-                      layout="responsive"
-                      width={500}
-                      height={400}
-                    />
-                  </Box>
-                  <VStack align={"start"} width={{ base: "100%", md: "50%" }}>
-                    <Text as={"p"} align={"start"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      That are all doing different things
-                    </Text>
-                    <UnorderedList>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          No, you are not competing with each other.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Most of our customers target different influencers and niches.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Most of our customers are looking to promote very unique products or services.
-                        </Text>
-                      </ListItem>
-                    </UnorderedList>
-                  </VStack>
-                </Stack>
-
-                <Stack
-                  direction={{ base: "column", md: "row" }}
-                  spacing={{ base: 10, md: 20 }}
-                  width={"100%"}
-                  align={"start"}
-                >
-                  <Box width={{ base: "100%", md: "50%" }}>
-                    <Image
-                      style={{ filter: "grayscale(100%)" }}
-                      src="/sec3_img.jpg"
-                      alt="partnership"
-                      layout="responsive"
-                      width={500}
-                      height={400}
-                    />
-                  </Box>
-                  <VStack align={"start"} width={{ base: "100%", md: "50%" }}>
-                    <Text as={"p"} align={"start"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      That are willing to form partnerships
-                    </Text>
-                    <UnorderedList>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Performance marketing opportunities.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Referrals.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Direct influencers with an audience.
-                        </Text>
-                      </ListItem>
-                    </UnorderedList>
-                  </VStack>
-                </Stack>
-
-                <Stack
-                  direction={{ base: "column", md: "row" }}
-                  spacing={{ base: 10, md: 20 }}
-                  width={"100%"}
-                  align={"start"}
-                >
-                  <Box width={{ base: "100%", md: "50%" }}>
-                    <Image
-                      style={{ filter: "grayscale(100%)" }}
-                      src="/sec4_img.jpg"
-                      alt="experience"
-                      layout="responsive"
-                      width={500}
-                      height={400}
-                    />
-                  </Box>
-                  <VStack align={"start"} width={{ base: "100%", md: "50%" }}>
-                    <Text as={"p"} align={"start"} fontSize={{ base: "xl", md: "xx-large" }} style={interFat.style}>
-                      And have personal experience
-                    </Text>
-                    <UnorderedList>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Personal relationship and welcoming present.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Direct access to the founder.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Free personal consultation
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        <Text
-                          as={"p"}
-                          align={"start"}
-                          fontSize={{ base: "md", md: "large" }}
-                          style={interRegular.style}
-                        >
-                          Intros with other founders
-                        </Text>
-                      </ListItem>
-                    </UnorderedList>
-                  </VStack>
-                </Stack>
-              </VStack>
-            </chakra.section>
-
             <chakra.section id="more-testimonials" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
-              <Text py={5} as={"p"} align={"center"} fontSize={{ base: "2xl", md: "xxx-large" }} style={interFat.style}>
-                OUR CUSTOMERS HAVE MADE MILLIONS OF DOLLARS USING OUR DATABASE
-              </Text>
+              
               <VStack spacing={8} align="center">
                 {testimonialsData &&
                   testimonialsData.map((testimonial: any, index: any) => {
@@ -878,7 +580,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                 Make your money back today
               </Text>
               <Text as={"p"} align={"center"} fontSize={{ base: "xl", md: "xx-large" }} style={interRegular.style}>
-                Even a tiny deal with a high ticket client will make your money back for years
+                It takes just 1 deal to make your money back
               </Text>
 
               {products && (
@@ -892,7 +594,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
               )}
               <Box width="100%" height="auto" position="relative">
                 <Image
-                  src="https://i.imgur.com/wz25XH2.png"
+                  src="/companyLogo2.png"
                   alt="company-logos-2"
                   layout="responsive"
                   width={2000}

@@ -21,7 +21,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ featuredProduct, config }
           <Heading as="h1" size="xl">
             Privacy Policy
           </Heading>
-          <Text>Last Updated: 2025-05-16</Text>
+          <Text>Last Updated: 2025-09-01</Text>
 
           <Text>
             Welcome to www.leadsinc.net (“Site”). This Privacy Policy explains how we collect, use, share and protect personal information processed in relation to the Site and the services that we offer (“Services”) (collectively, “Platform”) and other interactions (e.g., customer service inquiries, live chat, social media etc.) that you may have with us. It also tells you about your choices with respect to our collection, use and disclosure of your personal information.
@@ -41,16 +41,16 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ featuredProduct, config }
               Changes to This Privacy Policy
             </Heading>
             <br />
-            <Text>This Privacy Policy was last updated on the date indicated above. Our business and/or the Platform may change from time to time, and as a result, at times it may be necessary for AMAttendees to make changes to this Privacy Policy. AMAttendees reserves the right to update or modify this Privacy Policy at any time and from time to time without prior notice. However, if we make changes that we believe will materially impact this Privacy Policy or your rights, we will promptly notify you of those changes. We encourage you to review this Privacy Policy from time to time. Your continued use of the Platform after any changes or revisions to this Privacy Policy will indicate your agreement to the terms of any such revised Privacy Policy.</Text>
+            <Text>This Privacy Policy was last updated on the date indicated above. Our business and/or the Platform may change from time to time, and as a result, at times it may be necessary for Leadsinc to make changes to this Privacy Policy. Leadsinc reserves the right to update or modify this Privacy Policy at any time and from time to time without prior notice. However, if we make changes that we believe will materially impact this Privacy Policy or your rights, we will promptly notify you of those changes. We encourage you to review this Privacy Policy from time to time. Your continued use of the Platform after any changes or revisions to this Privacy Policy will indicate your agreement to the terms of any such revised Privacy Policy.</Text>
 
             <Heading as="h2" size="lg" mt={4}>
               Children’s Privacy
             </Heading>
             <br />
             <Text>
-              AMAttendees does not knowingly collect information from children under the age of 16. If you are under the age of 16, please do not submit any personal data through the Platform. We encourage parents and legal guardians to monitor their children’s Internet usage and to help enforce our Privacy Policy by instructing their children never to provide personal data on our Platform without their permission.
+              Leadsinc does not knowingly collect information from children under the age of 16. If you are under the age of 16, please do not submit any personal data through the Platform. We encourage parents and legal guardians to monitor their children’s Internet usage and to help enforce our Privacy Policy by instructing their children never to provide personal data on our Platform without their permission.
               <br />
-              If you have reason to believe that a child under the age of 16 has provided personal data to AMAttendees through the Platform, please contact us and we will endeavor to delete that information from our databases.
+              If you have reason to believe that a child under the age of 16 has provided personal data to Leadsinc through the Platform, please contact us and we will endeavor to delete that information from our databases.
             </Text>
 
             <Heading as="h2" size="lg" mt={4}>
@@ -162,12 +162,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ featuredProduct, config }
             </Heading>
             <Text>
               If you have any questions, concerns, or requests related to this Privacy Policy, you can contact us at:
-            </Text>
-            <Text mt={2}>
-              Twitter/X:{" "}
-              <Link href="https://twitter.com/iamfra5er" isExternal color="blue.500">
-                @iamfra5er
-              </Link>
             </Text>
           </Box>
 

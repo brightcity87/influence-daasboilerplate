@@ -125,7 +125,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
               lineHeight={1.2}
               style={interExtraFat.style}
             >
-              Is Your Team Wasting Hours Prospecting Instead of Closing New Partners?
+              Wasting Hours Prospecting Instead of Closing New Partners?
             </Text>
 
             <Text textAlign="center">We’ve already done the research—just plug into the data, reach out, and start closing.</Text>
@@ -195,7 +195,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                     as={Link}
                     variant={"outline"}
                   >
-                    <Text style={interFat.style}>Demo</Text>
+                    <Text style={interFat.style}>Search for Free</Text>
                   </Button>
                 </>
               )}
@@ -293,7 +293,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
               )}
             </Stack>
 
-            <chakra.section id="companies" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
+            <chakra.section id="companies" position="relative" zIndex={20} justifyContent="center" py={"1rem"}>
               <Text
                 py={5}
                 as={"p"}
@@ -315,7 +315,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
               </Box>
             </chakra.section>
 
-            <chakra.section id="how-it-works" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
+            <chakra.section id="how-it-works" position="relative" zIndex={20} justifyContent="center" py={"1rem"}>
               <Text py={5} as={"p"} align={"center"} fontSize={{ base: "2xl", md: "xxx-large" }} style={interFat.style}>
                 How To Increase Your Revenue
               </Text>
@@ -350,7 +350,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
               </Stack>
             </chakra.section>
 
-            <chakra.section id="testimonials" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
+            <chakra.section id="testimonials" position="relative" zIndex={20} justifyContent="center" py={"1rem"}>
               <Text py={5} as={"p"} align={"center"} fontSize={{ base: "2xl", md: "xxx-large" }} style={interFat.style}>
                 Our subscribers have closed thousands of deals using our leads
               </Text>
@@ -412,7 +412,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
               </Text>
 
               <VStack py={20} spacing={10}>
-                <Stack direction={{ base: "column", md: "row" }} spacing={{ base: 10, md: 20 }} alignItems="center">
+                <Stack direction={{ base: "column", md: "row" }} spacing={{ base: 10, md: 20 }} alignItems="flex-start" justifyContent="flex-start" display="flex">
                   <VStack align={"start"} width={{ base: "100%", md: "50%" }}>
                     <Text
                       py={4}
@@ -427,19 +427,6 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                       Startups, large brands, fortune 500 media companies. Each of these companies have big needs and even bigger budgets to match them.
                     </Text>
                   </VStack>
-                  <Box width={{ base: "100%", md: "50%" }}>
-                    <Image src="/graph.png" alt="graph" layout="responsive" width={500} height={500} />
-                  </Box>
-                </Stack>
-
-                <Stack
-                  direction={{ base: "column-reverse", md: "row" }}
-                  spacing={{ base: 10, md: 20 }}
-                  alignItems="center"
-                >
-                  <Box width={{ base: "100%", md: "50%" }}>
-                    <Image src="/feature_two.png" alt="feature" layout="responsive" width={500} height={500} />
-                  </Box>
                   <VStack align={"start"} width={{ base: "100%", md: "50%" }}>
                     <Text
                       py={4}
@@ -456,7 +443,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                   </VStack>
                 </Stack>
 
-                <Stack direction={{ base: "column", md: "row" }} spacing={{ base: 10, md: 20 }} alignItems="center">
+                <Stack direction={{ base: "column", md: "row" }} spacing={{ base: 10, md: 20 }} alignItems="center" justifyContent="center" display="flex">
                   <VStack align={"start"} width={{ base: "100%", md: "50%" }}>
                     <Text
                       py={4}
@@ -472,14 +459,11 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                       email addresses and when publicly available.
                     </Text>
                   </VStack>
-                  <Box width={{ base: "100%", md: "50%" }}>
-                    <Image src="/feature_three.png" alt="diagram" layout="responsive" width={500} height={500} />
-                  </Box>
                 </Stack>
               </VStack>
             </chakra.section>
 
-            <Box width="100%" height="auto" position="relative">
+            {/* <Box width="100%" height="auto" position="relative">
               <Image
                 src="https://i.imgur.com/wz25XH2.png"
                 alt="company-logos"
@@ -487,7 +471,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                 width={2000}
                 height={2000}
               />
-            </Box>
+            </Box> */}
 
             <chakra.section id="features" position="relative" zIndex={20} justifyContent="center" py={"2rem"}>
               <Text as={"p"} align={"center"} fontSize={{ base: "2xl", md: "xxx-large" }} style={interFat.style}>
@@ -501,7 +485,7 @@ const TemplateApp: NextPage<TemplateAppProps> = ({
                 <Box>
                   <VStack align={"center"}>
                     <Text as={"p"} align={"center"} fontSize={{ base: "lg", md: "x-large" }} style={interFat.style}>
-                      Carefully selected one by one
+                    Carefully selected
                     </Text>
                     <Text as={"p"} align={"center"} fontSize={{ base: "md", md: "large" }} style={interRegular.style}>
                       Each data point is collected and verified by a person. No bots or agents are involved.

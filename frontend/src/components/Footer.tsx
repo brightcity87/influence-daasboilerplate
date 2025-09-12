@@ -60,7 +60,7 @@ export const Footer = () => {
               </Text>
               {/* Disclaimer */}
               <Text fontSize="xs" color="gray.500" textAlign={["center", "center", "left"]}>
-                Unless expressly stated, ConferenceLink is not endorsed by, affiliated with, authorized by, or in any way officially connected to any event organizer or any of its subsidiaries or affiliates. All product and company names are the registered trademarks of their original owners.
+                Unless expressly stated, LeadsInc is not endorsed by, affiliated with, authorized by, or in any way officially connected to any event organizer or any of its subsidiaries or affiliates. All product and company names are the registered trademarks of their original owners.
               </Text>
             </VStack>
 
@@ -83,9 +83,6 @@ export const Footer = () => {
                   </ListItem>
                   <ListItem as={Link} href="/blog">
                     Blog
-                  </ListItem>
-                  <ListItem as={Link} href="https://daasboilerplate.getrewardful.com/signup">
-                    Affiliates
                   </ListItem>
                 </VStack>
               </List>

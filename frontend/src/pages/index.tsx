@@ -26,7 +26,13 @@ const Home: NextPage<HomeProps> = ({ featuredProduct, configData, faqs, testimon
 
   switch (configData.attributes.template) {
     case "main":
-      return <TemplateMain featuredProduct={featuredProduct} faqs={faqs} products={products} config={configData} />;
+      return <TemplateApp
+        featuredProduct={featuredProduct}
+        faqs={faqs}
+        testimonials={testimonials}
+        products={products}
+        config={configData}
+      />
     case "app":
     default:
       return (

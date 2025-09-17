@@ -210,7 +210,7 @@ const Free: NextPage<FreePageProps> = ({
           </HStack>
           {featuredProduct ? (
             <CTA
-              innerText="Get Instant Access!"
+              innerText="Remove All Limits"
               redirect={featuredProduct.attributes.redirect}
               priceId={featuredProduct.attributes.priceId}
               mode={featuredProduct.attributes.mode}
@@ -218,7 +218,7 @@ const Free: NextPage<FreePageProps> = ({
             />
           ) : (
             <Button colorScheme="brand" variant="solid" size="md" px={8} isDisabled>
-              Get Instant Access!
+              Remove All Limits
             </Button>
           )}
         </VStack>
@@ -459,15 +459,19 @@ const Free: NextPage<FreePageProps> = ({
                 </Text>
                 <Text fontSize="1.1rem" style={interRegular.style} mb={4} color="gray.600">
                 Don't let great opportunities slip away while you wait.
-
+                <br/>
+                <br/>
                 ✅ Unlimited database access
+                <br/>
                 ✅ Advanced search filters  
+                <br/>
                 ✅ Export capabilities
+                <br/>
                 ✅ Priority suppor
                 </Text>
                 {featuredProduct ? (
                   <CTA
-                    innerText="Get Instant Access!"
+                    innerText="Remove All Limits"
                     redirect={featuredProduct.attributes.redirect}
                     priceId={featuredProduct.attributes.priceId}
                     mode={featuredProduct.attributes.mode}

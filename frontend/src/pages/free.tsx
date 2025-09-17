@@ -455,10 +455,15 @@ const Free: NextPage<FreePageProps> = ({
                 borderColor="brand.500"
               >
                 <Text fontSize="1.5rem" style={interExtraFat.style} mb={2} color="brand.700">
-                  You have used your daily free searches.
+                🔍 Search limit reached for today!
                 </Text>
                 <Text fontSize="1.1rem" style={interRegular.style} mb={4} color="gray.600">
-                  Get instant access for unlimited searches!
+                Don't let great opportunities slip away while you wait.
+
+                ✅ Unlimited database access
+                ✅ Advanced search filters  
+                ✅ Export capabilities
+                ✅ Priority suppor
                 </Text>
                 {featuredProduct ? (
                   <CTA
@@ -469,7 +474,7 @@ const Free: NextPage<FreePageProps> = ({
                   />
                 ) : (
                   <Button colorScheme="brand" variant="solid" borderRadius="10px" size="lg" px={8} isDisabled>
-                    Get Instant Access!
+                    Remove All Limits
                   </Button>
                 )}
               </Box>

@@ -12,7 +12,7 @@ type Config = {
 // Define rate limits based on user types
 const rateLimiters: Record<RateLimiterType, RateLimiterMemory> = {
   free: new RateLimiterMemory({
-    points: 3, // Number of requests
+    points: 6, // Number of requests
     duration: 86400, // Per day
   }),
   premium: new RateLimiterMemory({

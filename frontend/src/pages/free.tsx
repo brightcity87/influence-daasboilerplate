@@ -459,8 +459,9 @@ const Free: NextPage<FreePageProps> = ({
                 </Text>
                 <Text fontSize="1.1rem" style={interRegular.style} mb={4} color="gray.600">
                 Don't let great opportunities slip away while you wait.
+                </Text>
                 <br/>
-                <br/>
+                <Text fontSize="1.1rem" style={interRegular.style} mb={4} color="gray.600" textAlign="left">
                 ✅ Unlimited database access
                 <br/>
                 ✅ Advanced search filters  
